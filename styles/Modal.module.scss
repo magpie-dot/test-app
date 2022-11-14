@@ -1,0 +1,101 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 32px;
+  border-radius: 8px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 12px #00000014;
+  text-align: center;
+}
+
+.title {
+    margin-bottom: 8px;
+  .highlighted {
+    color: #2fcdc2;
+    text-transform: capitalize;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 12px;
+  height: 100px;
+}
+
+.label {
+  opacity: 0;
+  transition: 0.3s;
+  font-size: 0.8rem;
+  margin-bottom: -16px;
+  text-align: left;
+
+  &.show {
+    opacity: 1;
+    color: gray;
+    margin-bottom: 0;
+  }
+}
+
+.input {
+  border: none;
+  border-bottom: 3px solid grey;
+  padding-bottom: 6px;
+  font-size: 1rem;
+
+  &::placeholder {
+    color: grey;
+    transition: 100ms;
+    transition-delay: 50ms;
+    font-size: 1rem;
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+    border-image: linear-gradient(to right, #2fcdc2, #27695f);
+    border-image-slice: 1;
+
+    ~ .label {
+      opacity: 1;
+      margin-bottom: 0;
+      color: #29a39b;
+    }
+    &::placeholder {
+      opacity: 0;
+      transition-delay: 1;
+    }
+  }
+}
+
+.button {
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px 16px;
+  background-size: 200%;
+  background-image: linear-gradient(to right, #2fcdc2, #27695f, #2fcdc2);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.6s;
+
+  &:active {
+    background-position: right;
+  }
+
+  &:disabled {
+    background-image: none;
+    background-color: gainsboro;
+    color: gray;
+    cursor: auto;
+  }
+
+}
