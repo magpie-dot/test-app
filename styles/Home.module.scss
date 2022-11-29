@@ -25,13 +25,17 @@
   font-weight: 700;
 }
 
+.center {
+    text-align: center;
+}
+
 .input {
   width: 300px;
   height: 44px;
   border: 2px solid #2fcdc2;
   border-right: none;
-  border-top-left-radius: 22px;
-  border-bottom-left-radius: 22px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   outline: none;
   padding-left: 16px;
   padding-right: 16px;
@@ -48,8 +52,8 @@
   align-items: center;
   font-size: 16px;
   padding: 0 8px 0 16px;
-  border-top-right-radius: 22px;
-  border-bottom-right-radius: 22px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   cursor: pointer;
   color: white;
   transition: 200ms;
