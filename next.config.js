@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   output: "export",
   distDir: "dist",
+  basePath: "/test-app",
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
